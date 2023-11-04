@@ -15,23 +15,23 @@ export const BuyToLetResultSummary = ({ result }: any) => {
             <table className="table text-base-content w-full text-xl">
                 <tbody>
                     <tr>
-                        <td>Initial Capital</td>
+                        <td>Pradinis kapitalas</td>
                         <td className='font-black'>{currencyFormatter.format(result.capital.total ?? 0)}</td>
                     </tr>
                     <tr>
-                        <td>Annual Gross Income</td>
+                        <td>Metinės pajamos<small><h6>(prieš mokesčius)</h6></small></td>
                         <td>{currencyFormatter.format(result.rentalIncome)}</td>
                     </tr>
                     <tr>
-                        <td>Annual Cost + Fees</td>
+                        <td>Metinės išlaidos + mokesčiai</td>
                         <td>{currencyFormatter.format(result.annualCost)}</td>
                     </tr>
                     <tr>
-                        <td>Annual Gross Profit</td>
+                        <td>Metinis pelnas <small><h6>(prieš mokesčius)</h6></small></td>
                         <td className={`${totalTextClass} font-bold`}>{currencyFormatter.format(result.annualProfit ?? 0)}</td>
                     </tr>
                     <tr>
-                        <td>Annual Yield</td>
+                        <td>Metinis pajamingumas</td>
                         <td className={`${totalTextClass} font-bold`}>{result.annualProfitPercentage.toFixed(2)}%</td>
                     </tr>
                 </tbody>
@@ -48,36 +48,38 @@ export const BuyToLetResultDetailed = ({ result, input }: { result: BuyToLetResu
             <caption>Initial Capital</caption>
             <tbody>
                 <tr>
-                    <td>Deposit</td>
+                    <td>Depozitas</td>
                     <td>{currencyFormatter.format(result.capital.deposit)}</td>
                 </tr>
                 <tr>
-                    <td>Stamp Duty</td>
+                    <td>Žyminis mokestis (<small>Stamp Duty)</small></td>
                     <td>{currencyFormatter.format(result.capital.stampDuty)}</td>
                 </tr>
                 <tr>
-                    <td>Solicitor Fees</td>
+                    <td>Advokato mokesčiai</td>
                     <td>{currencyFormatter.format(result.capital.solicitorFees)}</td>
                 </tr>
                 <tr>
-                    <td>Mortgage Fees</td>
+                    <td>Paskolos mokesčiai</td>
                     <td>{currencyFormatter.format(result.capital.mortgageFees)}</td>
                 </tr>
                 <tr className="font-black">
-                    <td>Total</td>
+                    <td>Iš viso:</td>
                     <td>{currencyFormatter.format(result.capital.total)}</td>
                 </tr>
             </tbody>
         </table>
         <table>
-            <caption>Annual</caption>
+
+            <caption>Kasmetinės</caption>
             <tbody>
+
                 <tr>
-                    <td>Income</td>
+                    <td>Pajamos</td>
                     <td>{currencyFormatter.format(result.rentalIncome)}</td>
                 </tr>
                 <tr>
-                    <td>Mortgage Payment</td>
+                    <td>Paskolos įmoka</td>
                     <td>{currencyFormatter.format(result.monthlyMortgagePayment * 12)}</td>
                 </tr>
                 {input.managementFees > 0 && <tr>
@@ -85,24 +87,25 @@ export const BuyToLetResultDetailed = ({ result, input }: { result: BuyToLetResu
                     <td>{currencyFormatter.format(input.managementFees)}</td>
                 </tr>}
                 <tr>
-                    <td>Service Charge</td>
+                    <td>Paslaugų mokestis</td>
                     <td>{currencyFormatter.format(input.annualServiceCharge)}</td>
                 </tr>
                 {input.groundRent > 0 && <tr>
-                    <td>Ground Rent</td>
+                    <td>Žemės nuoma</td>
                     <td>{currencyFormatter.format(input.groundRent)}</td>
                 </tr>}
                 <tr>
-                    <td>Maintenance</td>
+                    <td>Priežiūra</td>
                     <td>{currencyFormatter.format(input.annualMaintenance)}</td>
                 </tr>
                 {input.other > 0 && <tr>
-                    <td>Other</td>
+                    <td>Kita</td>
                     <td>{currencyFormatter.format(input.other)}</td>
                 </tr>}
                 <tr>
-                    <td>Annual Gross Profit</td>
-                    <td className={`${totalTextClass} font-bold`}>{currencyFormatter.format(result.annualProfit ?? 0)}</td>
+                    <td>Kasmetinės pajamos </td>
+
+                    <td className={`${totalTextClass} font-extrabold`}>{currencyFormatter.format(result.annualProfit ?? 0)}</td>
                 </tr>
             </tbody>
         </table>

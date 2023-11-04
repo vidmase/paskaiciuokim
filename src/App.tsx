@@ -55,7 +55,7 @@ const CapitalView = ({ inputState, onChange, onInterestChange, interestOnly, isL
 
     <div className='flex align-middle space-x-2'>
       <input defaultChecked={interestOnly} type='checkbox' className='checkbox' onChange={(e) => onInterestChange(e.target.checked)} />
-      <span>Interest Only</span>
+      <span>Tik palūkanos</span>
     </div>
   </div>
 }
@@ -148,16 +148,14 @@ const App = () => {
     <div className='hero-content w-full flex-col max-w-4xl'>
 
       <div className='max-w-xl grid grid-flow-row space-y-8 my-8'>
-        <h1 className="text-4xl font-bold text-center">Buy To Let Profitability Calculator</h1>
+        <h1 className="text-4xl font-bold text-center">Pelningumo skaičiuoklė</h1>
 
         <p className='text-base-content text-2xl'>
-          This is a simple calculator to help you estimate the profitability of a buy to let property.
+          <small>Tai paprastas skaičiuotuvas, padėsiantis įvertinti nekilnojamojo turto pirkimo ir nuomos pelningumą</small>
+
         </p>
 
-        <p className='alert alert-warning text-left rounded-none'>
-          <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-          It is not intended to be a replacement for professional advice but a tool to quickly estimate the profitability of a property.
-        </p>
+
       </div>
 
       <div className='flex flex-col lg:flex-row-reverse'>
@@ -170,8 +168,8 @@ const App = () => {
         <div className="card flex-1 shadow-2xl bg-base-100 rounded-none w-full">
           <div className='card-body'>
             <div className="tabs tabs-bordered">
-              <a className={`tab tab-bordered text-xl ${view === 'capital' ? 'tab-active' : ''}`} onClick={() => setView('capital')}>Capital</a>
-              <a className={`tab tab-bordered text-xl ${view === 'fees' ? 'tab-active' : ''}`} onClick={() => setView('fees')}>Fees</a>
+              <a className={`tab tab-bordered text-xl ${view === 'capital' ? 'tab-active' : ''}`} onClick={() => setView('capital')}>Turtas</a>
+              <a className={`tab tab-bordered text-xl ${view === 'fees' ? 'tab-active' : ''}`} onClick={() => setView('fees')}>Mokesčiai</a>
               <div className='pt-8 w-full'>
                 {view === 'capital' && <CapitalView inputState={inputState} onChange={onChange} onInterestChange={setInterestOnly} interestOnly isLoss={result.annualProfit < 0} />}
                 {view === 'fees' && <FeeView inputState={inputState} onChange={onChange} />}
