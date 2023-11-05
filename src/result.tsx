@@ -117,8 +117,8 @@ export const BuyToLetResultView = ({ result, input }: { result: BuyToLetResult, 
 
     return <div className="w-full">
         <div className="flex justify-between">
-            <button className={`btn btn-sm ${view === 'summary' ? 'btn-primary' : 'btn-neutral'}`} onClick={() => setView('summary')}>Summary</button>
-            <button className={`btn btn-sm ${view === 'detailed' ? 'btn-primary' : 'btn-neutral'}`} onClick={() => setView('detailed')}>Detailed</button>
+            <button className={`btn btn-sm ${view === 'summary' ? 'btn-primary' : 'btn-neutral'}`} onClick={() => setView('summary')}>Santrauka</button>
+            <button className={`btn btn-sm ${view === 'detailed' ? 'btn-primary' : 'btn-neutral'}`} onClick={() => setView('detailed')}>Detaliai</button>
         </div>
         {view === 'summary' && <BuyToLetResultSummary result={result} />}
         {view === 'detailed' && <BuyToLetResultDetailed input={input} result={result} />}
