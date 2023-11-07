@@ -93,7 +93,7 @@ const App = () => {
     <div className='hero-content w-full flex-col max-w-3xl'>
 
       <div className='max-w-xl grid grid-flow-row space-y-4 my-8'>
-        <h1 className="text-5xl text-slate-600 uk-align-left -ms-1  font-semibold text-left">Pelningumo skaičiuoklė</h1>
+        <h1 className="text-5xl text-slate-600 font-semibold text-left">Pelningumo skaičiuoklė</h1>
 
 
         <p style={{
@@ -101,7 +101,7 @@ const App = () => {
           // Add your font family here
           fontFamily: '"Roboto", sans-serif', // Replace 'Your Font Family' with the font you want to use
           // Adjust the margins as required
-          marginTop: '0px',
+          marginTop: '3px',
           marginRight: '61px',
           marginBottom: '35px',
           marginLeft: '50px'
@@ -117,7 +117,7 @@ const App = () => {
             color: 'red',
             fontSize: '30px',
             textAlign: 'right',
-            margin: '5px',
+            margin: '4px',
             padding: '5px',
             backgroundColor: '#F4CE14',
             borderRadius: '20%', // Makes the background circle if the icon is square sized
@@ -139,7 +139,7 @@ const App = () => {
           marginTop: '0px',
           marginRight: '32px',
           marginBottom: '0px',
-          marginLeft: '0px'
+          marginLeft: '21px'
         }}>
           <p className="text-1xl text-slate-600 uk-align-right@s -ms-5 font-thin font-semibold text-left">
           <small style={{ color: 'darkgray' }}>Tai paprastas skaičiuotuvas, padėsiantis įvertinti nekilnojamojo turto pirkimo ir nuomos pelningumą</small>
