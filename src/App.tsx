@@ -3,7 +3,7 @@ import { CurrencyInput, NumberInput, PercentageInput } from './input';
 import { BuyToLetInput, buyToLetCalculator } from './calculator';
 import { BuyToLetResultView } from './result';
 import { BUY_TO_LET_INPUT } from './properties';
-
+import LabelComponent from './LabelComponent'; // Adjust the import path as necessary
 const FeeView = ({ inputState, onChange }: any) => {
   return <div className='w-full grid grid-flow-row space-y-8'>
     <CurrencyInput
@@ -107,18 +107,18 @@ const App = () => {
           marginLeft: '50px'
 
         }}>
-          <small style={{ color: 'darkgray' }}>Skirta Meilei</small>
+          <small style={{ color: 'darkgray' }}>Rent, Relax, Repeat</small>
 
 
-          <span uk-icon="heart" style={{
+          <span uk-icon="home" style={{
             color: 'red',
-            fontSize: '50px',
+            fontSize: '30px',
             margin: '5px',
             padding: '5px',
             backgroundColor: '#F4CE14',
-            borderRadius: '30%', // Makes the background circle if the icon is square sized
+            borderRadius: '50%', // Makes the background circle if the icon is square sized
             display: 'inline-grid', // Required for some properties like padding to work properly
-            transform: 'rotate(20deg)',
+            transform: 'rotate(0deg)',
             transition: 'transform 0.3s ease' // Smoothly rotate the icon on hover
 
           }}></span>
