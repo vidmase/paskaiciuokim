@@ -25,10 +25,22 @@ export const BuyToLetResultSummary = ({ result }: any) => {
                     <tr>
                         <td>Metinės išlaidos + mokesčiai</td>
                         <td>{currencyFormatter.format(result.annualCost)}</td>
+
                     </tr>
                     <tr>
                         <td>Metinis pelnas <small><h6>(prieš mokesčius)</h6></small></td>
                         <td className={`${totalTextClass} font-bold`}>{currencyFormatter.format(result.annualProfit ?? 0)}</td>
+                        <span uk-icon="happy" style={{
+                            color: 'red',
+                            fontSize: '36px',
+                            margin: '5px',
+                            padding: '5px',
+                            backgroundColor: '#F4CE14',
+                            borderRadius: '100%', // Makes the background circle if the icon is square sized
+                            display: 'inline-grid', // Required for some properties like padding to work properly
+                            transform: 'rotate(20deg)',
+                            transition: 'transform 0.3s ease' // Smoothly rotate the icon on hover
+                        }}></span>
                     </tr>
                     <tr>
                         <td>Metinis pajamingumas</td>
@@ -71,14 +83,16 @@ export const BuyToLetResultDetailed = ({ result, input }: { result: BuyToLetResu
         </table>
         <table>
 
-            <caption>Kasmetinės</caption>
-            <tbody>
 
-                <tr>
-                    <td>Pajamos</td>
+            <tbody>
+            <caption style={{ marginTop: '-10px' }}>Kasmetinės</caption>
+
+            <tr>
+                    <td style={{ paddingTop: '10px' }}>Pajamos</td>
                     <td>{currencyFormatter.format(result.rentalIncome)}</td>
                 </tr>
-                <tr>
+
+            <tr>
                     <td>Paskolos įmoka</td>
                     <td>{currencyFormatter.format(result.monthlyMortgagePayment * 12)}</td>
                 </tr>
@@ -103,6 +117,7 @@ export const BuyToLetResultDetailed = ({ result, input }: { result: BuyToLetResu
                     <td>{currencyFormatter.format(input.other)}</td>
                 </tr>}
                 <tr>
+
                     <td>Kasmetinės pajamos </td>
 
                     <td className={`${totalTextClass} font-extrabold`}>{currencyFormatter.format(result.annualProfit ?? 0)}</td>
@@ -115,7 +130,7 @@ export const BuyToLetResultDetailed = ({ result, input }: { result: BuyToLetResu
 export const BuyToLetResultView = ({ result, input }: { result: BuyToLetResult, input: BuyToLetInput }) => {
     const [view, setView] = React.useState('summary');
 
-    return <div className="w-full">
+    return <div className="-tracking-wide ">
         <div className="flex justify-between">
             <button className={`btn btn-sm ${view === 'summary' ? 'btn-primary' : 'btn-neutral'}`} onClick={() => setView('summary')}>Santrauka</button>
             <button className={`btn btn-sm ${view === 'detailed' ? 'btn-primary' : 'btn-neutral'}`} onClick={() => setView('detailed')}>Detaliai</button>
