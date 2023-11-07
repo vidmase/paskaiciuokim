@@ -116,7 +116,7 @@ const App = () => {
             margin: '5px',
             padding: '5px',
             backgroundColor: '#F4CE14',
-            borderRadius: '50%', // Makes the background circle if the icon is square sized
+            borderRadius: '30%', // Makes the background circle if the icon is square sized
             display: 'inline-grid', // Required for some properties like padding to work properly
             transform: 'rotate(20deg)',
             transition: 'transform 0.3s ease' // Smoothly rotate the icon on hover
