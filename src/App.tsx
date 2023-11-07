@@ -3,7 +3,7 @@ import { CurrencyInput, NumberInput, PercentageInput } from './input';
 import { BuyToLetInput, buyToLetCalculator } from './calculator';
 import { BuyToLetResultView } from './result';
 import { BUY_TO_LET_INPUT } from './properties';
-import LabelComponent from './LabelComponent'; // Adjust the import path as necessary
+
 const FeeView = ({ inputState, onChange }: any) => {
   return <div className='w-full grid grid-flow-row space-y-8'>
     <CurrencyInput
