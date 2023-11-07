@@ -57,14 +57,14 @@ export const BuyToLetResultDetailed = ({ result, input }: { result: BuyToLetResu
     const totalTextClass = result.annualProfit > 0 ? 'text-green-700' : 'text-red-700';
     return <div className="grid grid-flow-row space-y-8">
         <table className="table text-base-content w-full text-xl">
-            <caption>Initial Capital</caption>
+            <caption>Pradinis kapitalas</caption>
             <tbody>
                 <tr>
                     <td>Depozitas</td>
                     <td>{currencyFormatter.format(result.capital.deposit)}</td>
                 </tr>
                 <tr>
-                    <td>Žyminis mokestis (<small>Stamp Duty)</small></td>
+                    <td>Žyminis mokestis (<small>Stamp Duty 3%)</small></td>
                     <td>{currencyFormatter.format(result.capital.stampDuty)}</td>
                 </tr>
                 <tr>
