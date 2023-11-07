@@ -141,8 +141,8 @@ const App = () => {
           marginBottom: '0px',
           marginLeft: '21px'
         }}>
-          <p className="text-1xl text-slate-600 uk-align-right@s -ms-5 font-thin font-semibold text-left">
-          <small style={{ color: 'darkgray' }}>Tai paprastas skaičiuotuvas, padėsiantis įvertinti nekilnojamojo turto pirkimo ir nuomos pelningumą</small>
+          <p className="text-1xxl text-slate-600 uk-align-right@s -ms-5 font-extralight font-bold text-left">
+          <small style={{ color: 'darkgray ' }}>Tai paprastas skaičiuotuvas, padėsiantis įvertinti nekilnojamojo turto pirkimo ir nuomos pelningumą</small>
         </p>
 
           <small></small>
