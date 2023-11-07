@@ -107,12 +107,12 @@ const App = () => {
           marginLeft: '50px'
 
         }}>
-          <small style={{ color: 'darkgray' }}>Skirta žmonai</small>
+          <small style={{ color: 'darkgray' }}>Skirta Meilei</small>
 
 
           <span uk-icon="heart" style={{
             color: 'red',
-            fontSize: '36px',
+            fontSize: '50px',
             margin: '5px',
             padding: '5px',
             backgroundColor: '#F4CE14',
@@ -120,6 +120,7 @@ const App = () => {
             display: 'inline-grid', // Required for some properties like padding to work properly
             transform: 'rotate(20deg)',
             transition: 'transform 0.3s ease' // Smoothly rotate the icon on hover
+
           }}></span>
 
 
