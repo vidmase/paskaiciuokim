@@ -92,8 +92,8 @@ const App = () => {
   return <div className='hero min-h-screen bg-base-200 text-xl'>
     <div className='hero-content w-full flex-col max-w-5xl'>
 
-      <div className='max-w-xl grid grid-flow-row space-y-0 my-8'>
-        <h1 className="text-5xl text-slate-700  font-semibold text-left">Pelningumo skaičiuoklė</h1>
+      <div className='max-w-xl grid grid-flow-row space-y-4 my-8'>
+        <h1 className="text-5xl text-slate-600 uk-align-left -ms-40  font-semibold text-left">Pelningumo skaičiuoklė</h1>
 
 
         <p style={{
@@ -107,7 +107,10 @@ const App = () => {
           marginLeft: '50px'
 
         }}>
-          <small style={{ color: 'darkgray' }}>Rent, Relax, Repeat</small>
+          <small style={{
+
+            color: 'darkgray'}}>Rent, Relax, Repeat
+          </small>
 
 
           <span uk-icon="home" style={{
@@ -138,9 +141,10 @@ const App = () => {
           marginBottom: '0px',
           marginLeft: '0px'
         }}>
+          <p className="text-1xl text-slate-600 uk-align-left -ms-40 font-thin font-semibold text-left">
           <small style={{ color: 'darkgray' }}>Tai paprastas skaičiuotuvas, padėsiantis įvertinti nekilnojamojo turto pirkimo ir nuomos pelningumą</small>
         </p>
-        <p className='text-base-content/30 text-green-600xl '>
+
           <small></small>
 
 
